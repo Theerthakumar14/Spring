@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean class="com.xworkz.supermarket.market.Supermarket"
+		id="supermarket">
+		<constructor-arg name="name" value="reliance" />
+		<constructor-arg name="noOfCounters" value="6" />
+		<constructor-arg name="address" ref="addressID" />
+		<constructor-arg name="gst" value="3.5" />
+		<constructor-arg name="worker" ref="workerID" />
+	</bean>
+
+	<bean class="com.xworkz.supermarket.market.Address" id="addressID">
+		<constructor-arg name="street" value="Avenue" />
+		<constructor-arg name="buildingNo" value="45" />
+		<constructor-arg name="doorNo" value="3" />
+		<constructor-arg name="pincode" value="573611" />
+	</bean>
+
+
+	<bean class="com.xworkz.supermarket.market.Worker" id="workerID">
+		<constructor-arg name="name" value="ram" />
+		<constructor-arg name="age" value="22" />
+		<constructor-arg name="gender" value="male" />
+		<constructor-arg name="phoneNo" value="6361622695" />
+	</bean>
+</beans>

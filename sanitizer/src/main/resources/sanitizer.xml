@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean class="com.xworkz.sanitizer.sanitiser.Alcohal"
+		id="alcohalID">
+		<constructor-arg name="name" value="Ethanol" />
+		<constructor-arg name="containsWater" value="true" />
+		<constructor-arg name="price" value="150.00" />
+	</bean>
+
+	<bean class="com.xworkz.sanitizer.sanitiser.Sanitizer" id="sanitiser">
+		<constructor-arg name="name" value="Savlon Hand Sanitiser" />
+		<constructor-arg name="price" value="100.00" />
+		<constructor-arg name="alcohal" ref="alcohalID" />
+		<constructor-arg name="brand" value="Dettol" />
+		<constructor-arg name="destroysBacteria" value="true" />
+	</bean>
+
+
+</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	
+	<bean class="com.xworkz.vaccine.vaccine.Address" id="addressID">
+		<constructor-arg name="street" value="SS purm" />
+		<constructor-arg name="post" value="Tumkururb" />
+		<constructor-arg name="district" value="Tumkur" />
+		<constructor-arg name="state" value="Karnataka" />
+		<constructor-arg name="pincode" value="572101" />
+	</bean>
+
+	<bean class="com.xworkz.vaccine.vaccine.Person" id="personID">
+		<constructor-arg name="name" value="Akash" />
+		<constructor-arg name="age" value="25" />
+		<constructor-arg name="mobileNo" value="8904517188" />
+		<constructor-arg name="personRegisteredThroughOnline" value="true" />
+	</bean>
+	
+	<bean class="com.xworkz.vaccine.vaccine.VaccinationCentre" id="centre">
+		<constructor-arg name="centreName" value="Kasturbha" />
+		<constructor-arg name="address" ref="addressID" />
+		<constructor-arg name="vaccinatedPerson" ref="personID" />
+		<constructor-arg name="vaccineType" value="Co-vaxin" />
+		<constructor-arg name="vaccineIsFree" value="true" />
+	</bean>
+
+
+
+
+</beans>

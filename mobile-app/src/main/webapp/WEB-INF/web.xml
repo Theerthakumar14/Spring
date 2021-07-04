@@ -15,4 +15,11 @@
   </init-param>
   <load-on-startup>8</load-on-startup>
   </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>dispatcherServlet</servlet-name>
+  <url-pattern>*.do</url-pattern>
+  
+  </servlet-mapping>
+  
 </web-app>

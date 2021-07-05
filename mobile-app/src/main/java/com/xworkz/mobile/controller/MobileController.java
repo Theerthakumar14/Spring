@@ -1,26 +1,29 @@
 package com.xworkz.mobile.controller;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@Component
-@RequestMapping("/")
+import com.xworkz.mobile.dto.MobileDTO;
+
+@Controller
 
 public class MobileController {
 	public MobileController() {
 		System.out.println("MobileController object is created");
 	}
 	
-	@RequestMapping(value="/mobile.do")
-	public String submit(@RequestParam String name,@RequestParam String brand,@RequestParam String Ram,
-			@RequestParam String price, Model model ) {
+	@RequestMapping(value="/mobile.do", method=RequestMethod.POST)
+	public String submit(@ModelAttribute MobileDTO mobiledto, Model model ) {
 		
 		
 		System.out.println("invoked submit()");
-		System.out.println(name + " " + brand + " " + Ram + " " + price );
-		model.addAttribute("display", "Thank u for purchasing  " + name);
+		System.out.println(mobiledto);
+		model.addAttribute("display", "Thank u for purchasing  " );
 		//		return"/WEB-INF/display.jsp";
 				return "mobile.jsp";
 		

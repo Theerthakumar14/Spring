@@ -47,7 +47,7 @@ color: Green;
 <h1>welcome to spring mvc</h1>
 <h2> ${display}  </h2>
 <div>
-<form action="mobile.do">
+<form action="mobile.do" method="post">
 <pre>
 MobileName:<input type="text" name="name"><br>
 MobileBrand:<input type="text" name="brand"><br>

@@ -5,12 +5,18 @@
 <head>
 <style>
 body{
-background-image: url('https://static.digit.in/default/f0120c64aeeba5e126ae1711b0e2e64e7f6e40de.jpeg?tr=w-1200');
+
+background-image: url('https://freerangestock.com/sample/140720/perfect-blue-sky-background--with-fluffy-clouds.jpg');
 background-position: center;
 background-attachment: fixed;
 background-size: 100%,100%;
 
 
+}
+img{
+display:block;
+margin-left: auto;
+margin-right:auto;
 }
 h1{
 text-align: center;
@@ -44,8 +50,9 @@ color: Green;
 <title>Mobile-app</title>
 </head>
 <body >
+
 <h1>welcome to spring mvc</h1>
-<h2> ${display}  </h2>
+<img alt="" src="https://i.ytimg.com/vi/cJKQdzopuco/maxresdefault.jpg" width="300px" height="250px">
 <div>
 <form action="mobile.do" method="post">
 <pre>
